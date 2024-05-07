@@ -1,0 +1,82 @@
+[
+    {
+        "id": "1",
+        "name": "Think and Grow",
+        "price": "0",
+        "category": "Free",
+        "title": "Guide to achieving success and wealth through positive thinking.",
+        "image": "https://dummyimage.com/300x400/000/fff&text=Think+and+Grow"
+    },
+    {
+        "id": "2",
+        "name": "The Great Gatsby",
+        "price": "10",
+        "category": "Fiction",
+        "title": "A story of love, greed, and the American Dream in the Jazz Age.",
+        "image": "https://dummyimage.com/300x400/000/fff&text=The+Great+Gatsby"
+    },
+    {
+        "id": "3",
+        "name": "To Kill a Mockingbird",
+        "price": "12",
+        "category": "Free",
+        "title": "A powerful exploration of racial injustice and moral growth in the Deep South.",
+        "image": "https://dummyimage.com/300x400/000/fff&text=To+Kill+a+Mockingbird"
+    },
+    {
+        "id": "4",
+        "name": "The Catcher in the Rye",
+        "price": "8",
+        "category": "Fiction",
+        "title": "A teenage boy's journey through alienation and rebellion in society.",
+        "image": "https://dummyimage.com/300x400/000/fff&text=The+Catcher+in+the+Rye"
+    },
+    {
+        "id": "5",
+        "name": "Pride and Prejudice",
+        "price": "9",
+        "category": "Fiction",
+        "title": "A classic romance novel exploring societal expectations and love.",
+        "image": "https://dummyimage.com/300x400/000/fff&text=Pride+and+Prejudice"
+    },
+    {
+        "id": "6",
+        "name": "1984",
+        "price": "11",
+        "category": "Free",
+        "title": "A dystopian novel depicting a totalitarian regime and individual rebellion.",
+        "image": "https://dummyimage.com/300x400/000/fff&text=1984"
+    },
+    {
+        "id": "7",
+        "name": "Harry Potter and the Sorcerer's Stone",
+        "price": "15",
+        "category": "Fantasy",
+        "title": "The beginning of a young wizard's journey in a magical world.",
+        "image": "https://dummyimage.com/300x400/000/fff&text=Harry+Potter+and+the+Sorcerer's+Stone"
+    },
+    {
+        "id": "8",
+        "name": "The Hobbit",
+        "price": "14",
+        "category": "Free",
+        "title": "An adventure of a hobbit, dwarves, and a wizard on a quest for treasure.",
+        "image": "https://dummyimage.com/300x400/000/fff&text=The+Hobbit"
+    },
+    {
+        "id": "9",
+        "name": "The Da Vinci Code",
+        "price": "13",
+        "category": "Mystery",
+        "title": "A thrilling mystery involving codes, symbols, and religious secrets.",
+        "image": "https://dummyimage.com/300x400/000/fff&text=The+Da+Vinci+Code"
+    },
+    {
+        "id": "10",
+        "name": "The Hunger Games",
+        "price": "10",
+        "category": "Science Fiction",
+        "title": "A dystopian tale of survival and rebellion in a post-apocalyptic world.",
+        "image": "https://dummyimage.com/300x400/000/fff&text=The+Hunger+Games"
+    }
+]
