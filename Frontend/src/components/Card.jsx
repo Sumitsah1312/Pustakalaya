@@ -36,7 +36,7 @@ import React from "react";
 function Card({ item }) {
   return (
     <div className="p-4">
-      <div className="card bg-base-100 shadow-xl hover:scale-105 duration-300">
+      <div className="card bg-base-100 shadow-xl hover:scale-105 duration-300 dark:text-black">
         <figure>
           <img className="w-full h-auto" src={item.image} alt={item.name} />
         </figure>

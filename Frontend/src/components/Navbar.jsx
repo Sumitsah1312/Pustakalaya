@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import Login from "./Login";
 function Navbar() {
   const navitems = (
     <>
@@ -23,16 +23,16 @@ function Navbar() {
   const element = document.documentElement;
   useEffect(() => {
     if (theme == "dark") {
-      element.classList.add("light");
+      element.classList.add("dark");
       localStorage.setItem("theme", "dark");
-      document.body.classList.add("light");
+      document.body.classList.add("dark");
     } 
     else {
-      element.classList.add("dark");
+      element.classList.remove("dark");
       localStorage.setItem("theme", "light");
-      document.body.classList.add("light");
+      document.body.classList.remove("dark");
     }
-  }, []);
+  }, [theme]);
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -88,11 +88,11 @@ function Navbar() {
             <ul className="menu menu-horizontal px-1">{navitems}</ul>
           </div>
           {/* Search Bar */}
-          <div className="hidden md:block mx-2">
+          <div className=" hidden md:block mx-2">
             <label className="px-3 py-1 rounded-md input flex items-center gap-2">
               <input
                 type="text"
-                className="grow outline-none"
+                className="grow outline-none dark:bg-slate-900 dark:text-white"
                 placeholder="Search"
               />
               <svg
@@ -140,9 +140,10 @@ function Navbar() {
             </label>
           </div>
           <div className="">
-            <a className="bg-black text-white px-5 py-2 rounded-md hover:bg-slate-800 duration-400 cursor-pointer">
+            <a className="bg-black text-white px-5 py-2 rounded-md hover:bg-slate-800 duration-400 cursor-pointer" onClick={()=>{document.getElementById("my_modal_3").showModal()}}>
               Login
             </a>
+            <Login/>
           </div>
         </div>
       </div>
