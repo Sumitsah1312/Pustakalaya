@@ -1,28 +1,43 @@
 import React from 'react'
+import {useForm} from "react-hook-form"
 import { Link } from 'react-router-dom'
 function Login() {
+
+  const {
+    register,
+    handleSubmit,
+    formState: {errors}
+  }=useForm();
+
+  const onSubmit=(data)=>console.log(data);
+
   return (
+
     <div>
       
 
 <dialog id="my_modal_3" className="modal">
   <div className="modal-box">
-    <form method="dialog">
+    <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
      
-      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-    </form>
+      <Link to="/" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</Link>
+   
     <h3 className="font-bold text-lg align-middle">LOGIN</h3>
     {/* Email */}
     <div className='py-4'>
       <span>Email</span>
       <br />
-      <input type='email' placeholder='Enter Your Email' className='w-80  px-3 py-1 border-rounded-md '/>
+      <input type='email' placeholder='Enter Your Email' {...register("email", { required: true })} className='w-80  px-3 py-1 border-rounded-md '/>
+      <br />
+      {errors.email && <span className='text-red-500'>This field is required</span>}
     </div>
   {/* Password */}
     <div >
       <span>PassWord</span>
       <br />
-      <input type='text' placeholder='Enter Your Password' className='w-80  px-3 py-1 border-rounded-md '/>
+      <input type='password' placeholder='Enter Your Password' {...register("password", { required: true })} className='w-80  px-3 py-1 border-rounded-md '/>
+      <br />
+      {errors.password && <span className='text-red-500'>This field is required</span>}
     </div>
     {/* Button */}
     <div className='text-center mt-2 display-flex justify-around'>
@@ -32,6 +47,8 @@ function Login() {
          </Link>
          {" "}</p>
     </div>
+
+    </form>
   
     
   </div>
