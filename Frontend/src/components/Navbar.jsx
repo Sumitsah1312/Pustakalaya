@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Login from "./Login";
+import { useAuth } from "../context/AuthProvider";
 function Navbar() {
+  
   const navitems = (
     <>
       <li>
