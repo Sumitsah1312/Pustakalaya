@@ -1,27 +1,29 @@
 import React from 'react'
 import Login from './Login'
 import {useForm} from "react-hook-form"
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 function Signup() {
-  const {
+
+ const {
     register,
     handleSubmit,
-    formState: {errors}
-  }=useForm();
+    formState: { errors },
+  } = useForm();
 
   const onSubmit=async(data)=>{
     const userInfo={
       fullname:data.fullname,
       email:data.email,
       password:data.password,
-    }
+    };
     await axios.post("http://localhost:4001/user/signup",userInfo)
     .then((res)=>{
       console.log(res.data);
       if(res.data){
         toast.success("Signup SuccessFully");
+        <Navigate to="/"/>
       }
       localStorage.setItem("User",JSON.stringify(res.data.user));
     })

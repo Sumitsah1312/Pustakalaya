@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Login from "./Login";
+import Logout from "./Logout";
 import { useAuth } from "../context/AuthProvider";
 function Navbar() {
-  
+  const [authUser,setAuthUser]=useAuth();
+  console.log(authUser);
   const navitems = (
     <>
       <li>
         <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/signup">Sign Up</a>
       </li>
       <li>
         <a href="/course">Course</a>
@@ -78,7 +83,7 @@ function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 dark:text-black"
             >
               {navitems}
             </ul>
@@ -141,12 +146,15 @@ function Navbar() {
               </svg>
             </label>
           </div>
+          {
+            authUser?<Logout/>:
           <div className="">
             <a className="bg-black text-white px-5 py-2 rounded-md hover:bg-slate-800 duration-400 cursor-pointer" onClick={()=>{document.getElementById("my_modal_3").showModal()}}>
               Login
             </a>
             <Login/>
           </div>
+          }
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import AuthProvider from './context/AuthProvider.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
   <AuthProvider>
-  <div className='dark:bg-sltas'>
+  <div className='dark:bg-sltae-900 dark:text-white'>
 
     <App />
   </div>
